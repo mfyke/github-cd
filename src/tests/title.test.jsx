@@ -1,9 +1,9 @@
-import { render } from '@testing-library/react'
-import App from '../App';
+import { render } from '@testing-library/react';
+import App from '../App'
 
-test('h1 should read Deploy to Render', () => {
-
+it('renders with the h1 content as Deploy to Render', () => {
   render(<App />);
 
-  expect(document.getElementsByTagName('h1')[0].textContent).toBe('Deploy to Render');
+  const h1 = document.querySelector('h1');
+  expect(h1.textContent).toBe('Deploy to Render');
 })
